@@ -1,0 +1,17 @@
+<div *ngIf="user" class="card mb-3">
+  <div class="row wrapperInfo">
+      <div  class="backgroundAvatar{{user.gender}}">
+        <img class="card-img-top avatarDetails" src="{{user.picture.large}}">
+      </div>
+      <h4 class="card-title txtBold">{{user.name.title}}. {{user.name.first}} {{user.name.last}}</h4>
+      <div class="col col-md-8">
+        <div class="card-block">
+            <p class="card-text"><span class="txtBold">Gender</span>: {{user.gender}}</p>
+            <p class="card-text"><span class="txtBold">Address</span>: {{user.location.street}}, {{user.location.city}} - {{user.location.state}} {{user.location.postcode}}</p>
+            <p class="card-text"><span class="txtBold">Email</span>: {{user.email}} - <span class="txtBold">Phone</span>: {{user.phone}}</p>
+            <p class="card-text"><small><span class="txtBold">Member Since</span>: {{user.registered}}</small></p>
+        </div>
+      </div>
+  </div>
+</div>
+<button (click)="goBack()" class="btn btn-primary btn-lg btn-block wrapperInfo">Back</button>

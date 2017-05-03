@@ -1,0 +1,21 @@
+<h1 class="wrap">
+  {{title}}
+</h1>
+<div class="list-group" *ngFor="let user of users">
+  <a class="list-home-item-border male list-group-item list-group-item-action flex-column align-items-start"
+  (click)="goToDetails(user)">
+      <div class="media" >
+          <div class="media-left">
+            <img src="{{user.picture.thumbnail}}" class="media-object avatar" style="width:60px">
+          </div>
+          <div class="media-body">
+              <h4 class="mb-1 list-home-title">{{user.name.title}}. {{user.name.first}} {{user.name.last}}</h4>
+              <small>Gender: {{user.gender}}</small>
+          </div>
+    </div>
+  </a>
+</div>
+<div class="wrap">
+    <pre>Current page: {{page}}</pre>
+    <ngb-pagination [collectionSize]="100" [(page)]="page" [boundaryLinks]="true" (pageChange)="onPageChange($event)"></ngb-pagination>
+</div>

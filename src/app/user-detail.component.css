@@ -1,0 +1,27 @@
+.avatarDetails{
+    width: 50%;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+.txtBold{
+    font-weight: bold;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 3em;
+}
+
+.backgroundAvatarfemale{
+    background-color: bisque;
+}
+
+.backgroundAvatarmale{
+    background-color: lightblue;
+}
+
+.wrapperInfo{
+    padding: 10px 20px 10px 20px;
+}
